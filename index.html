@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Page</title>
+    <style>
+        body {
+            background: linear-gradient(#481e49, #4682b4);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: #eae0c8;
+            font-size: 50px;
+            margin: none;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+            color: #d4af37;
+            font-size: 20px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        hr {
+            margin: 20px 0;
+            height: 1px;
+            background-color: #d4af37;
+            border: none;
+        }
+
+        img {
+            border-radius: 8px;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+
+        p {
+            color: #eae0c8;
+            font-size: 20px;
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        .content {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px 50px;
+        }
+
+        .more-info {
+            color: #d4af37;
+            display: block;
+            margin: 20px 0 0 0;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .more-info:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        button {
+            background-color: #d4af37;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+            color: #481e49;
+            display: block;
+            font-size: 18px;
+            margin: 15px auto;
+            transition: all 150ms ease-in-out;
+            padding: 25px 25px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: transparent;
+            color: #d4af37;
+            border: 1px solid #d4af37;
+        }
+
+        .linkedin {
+            color: #481e49;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>I love music</h1>
+        <h2>R&B music most of all</h2>
+        <hr />
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/103/062/original/I-Love-RB.jpg?1699193327"
+            alt="RnB Artists" />
+        <hr />
+        <p>
+            <strong>R&B music:</strong> A very popular and wide-ranging style of
+            music that emerged from traditional rythm and blues in the 1940s. R&B
+            can be characterized by its use of blues chords played over a strong and
+            consistent backbeat and by its emphasis on composition rather than the
+            improvisation common in traditional blues. Hip hop, rap, soul, and disco
+            are all categories of R&B. This music style also formed the foundation
+            of rock and roll.
+            <br />
+        </p>
+        <p>
+            <a href="https://en.wikipedia.org/wiki/Rhythm_and_blues" target="_blank" class="more-info">📖 Learn more in
+                Wikipedia
+            </a>
+        </p>
+        <button class="listen-button">🎧 Listen to R&B now</button>
+        <br />
+        <p class="footer">
+            This page was built by
+            <a href="https://www.linkedin.com/in/maria-berbis-martin/" target="_blank " class="linkedin">Maria Berbis
+            </a>
+        </p>
+    </div>
+    <script>
+        function listen() {
+            let name = prompt("What's your name?");
+            let email = prompt("What's your email address?");
+            let musicType = prompt("What's your favourite music style?");
+            musicType = musicType.toLowerCase();
+            musicType = musicType.trim();
+
+            if (musicType === "rnb" || musicType === "r&b") {
+                alert("Thank you " + name + "! Keep listening to R&B music");
+            } else {
+                alert(
+                    "Thank you " +
+                    name +
+                    "! Good that you like  " +
+                    musicType +
+                    " music, only try some R&B! 😁"
+                );
+            }
+        }
+
+        let listenButton = document.querySelector(".listen-button");
+        listenButton.addEventListener("click", listen);
+    </script>
+</body>
+
+</html>
