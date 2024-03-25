@@ -6,12 +6,12 @@ function listen() {
   musicType = musicType.trim();
 
   if (musicType === "rnb" || musicType === "r&b") {
-    alert("Thank you " + name + "! Keep listening to R&B music");
+    alert("Thank you, " + name + "! Keep listening to R&B music");
   } else {
     alert(
-      "Thank you " +
+      "Thank you, " +
         name +
-        "! Good that you like  " +
+        "! Good that you like " +
         musicType +
         " music, only try some R&B! 😁"
     );
